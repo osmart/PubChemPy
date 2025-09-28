@@ -91,7 +91,9 @@ log = logging.getLogger("pubchempy")
 log.addHandler(logging.NullHandler())
 
 #: Type alias for URL query parameters.
-QueryParam = str | int | float | bool | list[str] | None
+#QueryParam = str | int | float | bool | list[str] | None
+# osmart hack to get this work with Python 3.9
+QueryParam = None
 
 
 class CompoundIdType(enum.IntEnum):
